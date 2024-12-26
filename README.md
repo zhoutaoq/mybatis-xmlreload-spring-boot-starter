@@ -1,11 +1,9 @@
 # mybatis-xmlreload-spring-boot-starter
 mybatis-xmlreload-spring-boot-starter 支持xml文件热更新功能。Spring Boot2.0项目请使用 2.0.5.m3 版本。
 
-| 分支名称                                                                                             | Spring Boot版本 | Mybatis Xmlreload版本 |
-|--------------------------------------------------------------------------------------------------|---------------|---------------------|
-| [main](https://github.com/wayn111/mybatis-xmlreload-spring-boot-starter)                         | 3.0.4         | 3.0.5.m3            |
-| [springboot2](https://github.com/wayn111/mybatis-xmlreload-spring-boot-starter/tree/springboot2) | 2.2.7.RELEASE  | 2.0.5.m3            |
----
+## Forked From https://github.com/wayn111/mybatis-xmlreload-spring-boot-starter
+
+
 # 原理
 - 修改 xml 文件的加载逻辑。在普通的 mybatis-spring 项目中，默认只会加载项目编译过后的 xml 文件，也就是 target 目录下的 xml 文件。但是在mybatis-xmlreload-spring-boot-starter中，修改了这一点，它会加载 Maven 项目中 resources 或者 java 目录下的 xml 文件，这样用户对于 resources 或者 java 目录下 xml 文件的修改操作是可以立即触发热加载的。
 - 通过 io.methvin.directory-watcher 项目来监听 xml 文件的修改操作，它底层是通过 java.nio 的WatchService 来实现，当我们监听了整个 resources 目录后，xml 文件的修改会立马触发 MODIFY 事件。
@@ -19,7 +17,7 @@ mybatis-xmlreload-spring-boot-starter 支持xml文件热更新功能。Spring Bo
 在 Spring Boot3.0 Maven 项目提供坐标地址如下：
 ```xml
 <dependency>
-    <groupId>io.github.wayn111</groupId>
+    <groupId>io.github.zhoutaoq</groupId>
     <artifactId>mybatis-xmlreload-spring-boot-starter</artifactId>
     <version>3.0.5.m3</version>
 </dependency>
@@ -28,7 +26,7 @@ mybatis-xmlreload-spring-boot-starter 支持xml文件热更新功能。Spring Bo
 
 ```xml
 <dependency>
-    <groupId>io.github.wayn111</groupId>
+    <groupId>io.github.zhoutaoq</groupId>
     <artifactId>mybatis-xmlreload-spring-boot-starter</artifactId>
     <version>2.0.5.m3</version>
 </dependency>

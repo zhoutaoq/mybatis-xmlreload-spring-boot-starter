@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-io.github.wayn111.mybatis.xmlreload.autoconfiguration.MybatisXmlReloadConfiguration
+io.github.zhoutaoq.mybatis.xmlreload.autoconfiguration.MybatisXmlReloadConfiguration

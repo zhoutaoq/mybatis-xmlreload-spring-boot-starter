@@ -6,7 +6,6 @@ target/
 *.log
 *.iml
 .idea
-
 .factorypath
 .mvn/wrapper/maven-wrapper.jar
 *.releaseBackup

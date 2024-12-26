@@ -1,4 +1,4 @@
-package io.github.wayn111.mybatis.xmlreload.autoconfiguration;
+package io.github.zhoutaoq.mybatis.xmlreload.autoconfiguration;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -7,9 +7,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 @ConfigurationProperties(prefix = "mybatis-xml-reload")
 public class MybatisXmlReloadProperties {
-    private boolean enabled;
+    private boolean enabled = true;
 
-    private String[] mapperLocations;
+    private String[] mapperLocations = {"classpath*:mybatis/**/*.xml", "classpath*:mybatis/*.xml"};
 
     public boolean getEnabled() {
         return enabled;
